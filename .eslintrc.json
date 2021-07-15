@@ -20,7 +20,11 @@
   },
   "settings": {
     "alias": {
-      "map": [["src", "./src"]],
+      "map": [
+        ["@src", "./src"],
+        ["@assets", "./src/assets/"],
+        ["@icons", "./src/assets/icons.js"]
+      ],
       "extensions": [".js", ".jsx", ".json"]
     }
   }

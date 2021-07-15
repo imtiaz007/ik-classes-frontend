@@ -1,14 +1,14 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-// eslint-disable-next-line import/no-unresolved
-import AppBar from '@src/atoms/AppBar';
+import Header from '../../molecules/topNavBar';
+import Banner from './components/banner/Banner';
+import PricingCards from './components/pricingCards';
 
 const LandingPage = () => (
   <div>
-    <AppBar position="fixed" color="primary">
-      <div className="flex items-center p-3">
-        <header>IK Classes</header>
-      </div>
-    </AppBar>
+    <Header />
+    <Banner />
+    <PricingCards />
   </div>
 );
 
