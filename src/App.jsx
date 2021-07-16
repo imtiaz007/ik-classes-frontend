@@ -1,11 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import LandingPage from './pages/landingPage';
+import TopNavBar from './molecules/topNavBar';
 
 function App() {
   return (
     <Router>
-      <LandingPage />
+      <TopNavBar />
+      <Switch>
+        <Route to="/" component={LandingPage} />
+      </Switch>
     </Router>
   );
 }
