@@ -1,9 +1,9 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react';
-import {
-  ChevronRight as ChevronRightIcon,
-  ChevronLeft as ChevronLeftIcon,
-} from '@icons';
+// import {
+//   ChevronRight as ChevronRightIcon,
+//   ChevronLeft as ChevronLeftIcon,
+// } from '@icons';
 
 const ReviewCard = () => (
   <div className="flex justify-center">
