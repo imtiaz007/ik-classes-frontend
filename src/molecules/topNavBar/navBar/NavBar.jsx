@@ -8,7 +8,7 @@ const NavBar = (props) => {
   const [navHidden, setNavHidden] = React.useState(true);
 
   return (
-    <nav className="bg-gray-100 fixed w-full z-50 sm:w-screen">
+    <nav className="bg-gray-100 sticky w-full z-50 sm:w-screen">
       <div className="mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-4">

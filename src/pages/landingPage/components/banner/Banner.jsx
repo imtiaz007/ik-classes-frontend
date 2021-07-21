@@ -6,7 +6,7 @@ import NavItem from '../../../../molecules/topNavBar/navItem/NavItem';
 function Banner() {
   return (
     <div className="flex flex-col justify-between sm:flex-row">
-      <div className="flex flex-col px-10 mt-20 space-y-7 sm:space-y-5 justify-start sm:justify-center items-start w-full sm:w-1/2">
+      <div className="flex flex-col px-10 space-y-7 sm:space-y-5 justify-start sm:justify-center items-start w-full sm:w-1/2">
         <p className="text-gray-700 text-5xl sm:text-6xl">
           <span className="text-blue-400">Azure</span> your success in the cloud
         </p>
@@ -15,7 +15,7 @@ function Banner() {
           library of Azure training and courses.
         </p>
         <div className="sm:py-5">
-          <NavItem name="Schedule a Free Demo" type="cta" route="/demofrom" />
+          <NavItem name="Schedule a Free Demo" type="cta" route="/signup" />
         </div>
       </div>
       <TeachingSvg className="w-full h-full p-10 sm:w-1/2 sm:h-1/2 sm:p-24 " />

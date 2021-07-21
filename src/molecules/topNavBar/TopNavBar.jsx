@@ -9,7 +9,7 @@ import { Class as ClassIcon } from '@icons';
 function TopNavBar() {
   const brand = (
     <NavItem
-      route="/"
+      route="/home"
       name="IK Classes"
       type="brand"
       leftIcon={<ClassIcon />}
@@ -17,8 +17,8 @@ function TopNavBar() {
   );
   const primary = (
     <>
-      <NavItem route="/feature" name="Features" type="primary" />
-      <NavItem route="/course" name="Courses" type="primary" />
+      {/* <NavItem route="/feature" name="Features" type="primary" /> */}
+      <NavItem route="/allcourses" name="Courses" type="primary" />
     </>
   );
 

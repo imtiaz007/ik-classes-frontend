@@ -19,14 +19,14 @@ const ReviewCard = () => (
             className="w-16 h-16 rounded-full mr-3"
           />
           <p className="text-2xl place-self-center text-gray-600 font-semibold">
-            Ashraful Islam
+            Sharad
           </p>
         </div>
         <p className="text-sm sm:text-xl p-3 text-gray-400 text-semibold">
-          One of the first courses I did online was your ASP .NET MVC 5 course
-          and I was surprised when a few months later I started working in a
-          software factory and everything I had learned in the course was used
-          in real world applications
+          The trainig was great and very fulfilling. The timing is suitable for
+          all the session, I attended during office hours. I joined the session
+          and enjoyed a lot. His way of teaching is simple yet resourceful. Wish
+          you all the very best. I highly recommend learning from IK Classes.
         </p>
       </div>
       <div className="flex flex-col shadow-lg p-5 rounded-xl min-w-full sm:w-1/3">
@@ -37,122 +37,13 @@ const ReviewCard = () => (
             className="w-16 h-16 rounded-full mr-3"
           />
           <p className="text-2xl place-self-center text-gray-600 font-semibold">
-            Ashraful Islam
+            Maharajan
           </p>
         </div>
         <p className="text-sm sm:text-xl p-3 text-gray-400 text-semibold">
-          One of the first courses I did online was your ASP .NET MVC 5 course
-          and I was surprised when a few months later I started working in a
-          software factory and everything I had learned in the course was used
-          in real world applications
-        </p>
-      </div>
-      <div className="flex flex-col shadow-lg p-5 rounded-xl min-w-full sm:w-1/3">
-        <div className="flex">
-          <img
-            src="https://placeimg.com/640/480/any"
-            alt=""
-            className="w-16 h-16 rounded-full mr-3"
-          />
-          <p className="text-2xl place-self-center text-gray-600 font-semibold">
-            Ashraful Islam
-          </p>
-        </div>
-        <p className="text-sm sm:text-xl p-3 text-gray-400 text-semibold">
-          One of the first courses I did online was your ASP .NET MVC 5 course
-          and I was surprised when a few months later I started working in a
-          software factory and everything I had learned in the course was used
-          in real world applications
-        </p>
-      </div>
-      <div className="flex flex-col shadow-lg p-5 rounded-xl min-w-full sm:w-1/3">
-        <div className="flex">
-          <img
-            src="https://placeimg.com/640/480/any"
-            alt=""
-            className="w-16 h-16 rounded-full mr-3"
-          />
-          <p className="text-2xl place-self-center text-gray-600 font-semibold">
-            Ashraful Islam
-          </p>
-        </div>
-        <p className="text-sm sm:text-xl p-3 text-gray-400 text-semibold">
-          One of the first courses I did online was your ASP .NET MVC 5 course
-          and I was surprised when a few months later I started working in a
-          software factory and everything I had learned in the course was used
-          in real world applications
-        </p>
-      </div>
-      <div className="flex flex-col shadow-lg p-5 rounded-xl min-w-full sm:w-1/3">
-        <div className="flex">
-          <img
-            src="https://placeimg.com/640/480/any"
-            alt=""
-            className="w-16 h-16 rounded-full mr-3"
-          />
-          <p className="text-2xl place-self-center text-gray-600 font-semibold">
-            Ashraful Islam
-          </p>
-        </div>
-        <p className="text-sm sm:text-xl p-3 text-gray-400 text-semibold">
-          One of the first courses I did online was your ASP .NET MVC 5 course
-          and I was surprised when a few months later I started working in a
-          software factory and everything I had learned in the course was used
-          in real world applications
-        </p>
-      </div>
-      <div className="flex flex-col shadow-lg p-5 rounded-xl min-w-full sm:w-1/3">
-        <div className="flex">
-          <img
-            src="https://placeimg.com/640/480/any"
-            alt=""
-            className="w-16 h-16 rounded-full mr-3"
-          />
-          <p className="text-2xl place-self-center text-gray-600 font-semibold">
-            Ashraful Islam
-          </p>
-        </div>
-        <p className="text-sm sm:text-xl p-3 text-gray-400 text-semibold">
-          One of the first courses I did online was your ASP .NET MVC 5 course
-          and I was surprised when a few months later I started working in a
-          software factory and everything I had learned in the course was used
-          in real world applications
-        </p>
-      </div>
-      <div className="flex flex-col shadow-lg p-5 rounded-xl min-w-full sm:w-1/3">
-        <div className="flex">
-          <img
-            src="https://placeimg.com/640/480/any"
-            alt=""
-            className="w-16 h-16 rounded-full mr-3"
-          />
-          <p className="text-2xl place-self-center text-gray-600 font-semibold">
-            Ashraful Islam
-          </p>
-        </div>
-        <p className="text-sm sm:text-xl p-3 text-gray-400 text-semibold">
-          One of the first courses I did online was your ASP .NET MVC 5 course
-          and I was surprised when a few months later I started working in a
-          software factory and everything I had learned in the course was used
-          in real world applications
-        </p>
-      </div>
-      <div className="flex flex-col shadow-lg p-5 rounded-xl min-w-full sm:w-1/3">
-        <div className="flex">
-          <img
-            src="https://placeimg.com/640/480/any"
-            alt=""
-            className="w-16 h-16 rounded-full mr-3"
-          />
-          <p className="text-2xl place-self-center text-gray-600 font-semibold">
-            Ashraful Islam
-          </p>
-        </div>
-        <p className="text-sm sm:text-xl p-3 text-gray-400 text-semibold">
-          One of the first courses I did online was your ASP .NET MVC 5 course
-          and I was surprised when a few months later I started working in a
-          software factory and everything I had learned in the course was used
-          in real world applications
+          It is very useful to learn the all the new things for next level. And
+          given the expertise Imran has, it’s very easy to understand the
+          concepts.
         </p>
       </div>
     </div>
