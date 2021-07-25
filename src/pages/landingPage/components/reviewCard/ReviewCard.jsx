@@ -23,7 +23,7 @@ const ReviewCard = () => (
           </p>
         </div>
         <p className="text-sm sm:text-xl p-3 text-gray-400 text-semibold">
-          The trainig was great and very fulfilling. The timing is suitable for
+          The training was great and very fulfilling. The timing is suitable for
           all the session, I attended during office hours. I joined the session
           and enjoyed a lot. His way of teaching is simple yet resourceful. Wish
           you all the very best. I highly recommend learning from IK Classes.

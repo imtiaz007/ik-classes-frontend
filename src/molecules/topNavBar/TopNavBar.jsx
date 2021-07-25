@@ -18,7 +18,7 @@ function TopNavBar() {
   const primary = (
     <>
       {/* <NavItem route="/feature" name="Features" type="primary" /> */}
-      <NavItem route="/allcourses" name="Courses" type="primary" />
+      <NavItem route="/course" name="Courses" type="primary" />
     </>
   );
 
