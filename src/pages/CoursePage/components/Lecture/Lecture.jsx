@@ -40,9 +40,13 @@ const Lecture = ({ lecture, history }) => {
         ''
       )}
 
+<<<<<<< HEAD
       <article className="prose sm:prose-xl mt-5">
         {desc ? parse(desc) : ''}
       </article>
+=======
+      <article className="prose sm:prose-xl mt-5">{parse(desc)}</article>
+>>>>>>> aa102ef03e71585584128ecd0615074a3404c726
     </div>
   );
 };
