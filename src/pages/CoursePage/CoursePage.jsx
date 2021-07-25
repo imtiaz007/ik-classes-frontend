@@ -1,133 +1,54 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable arrow-body-style */
 import React from 'react';
-import { OndemandVideo as VideoIcon, Subject as SubjectIcon } from '@icons';
+import { useRecoilValue } from 'recoil';
+import { allCoursesState } from '@src/state/stateAtoms.js';
+import { useParams } from 'react-router-dom';
+import querystring from 'query-string';
+import { List as ListIcon } from '@icons';
+import Lecture from './components/Lecture/Lecture';
+import LectureList from './components/LectureList';
 
-const CoursePage = () => {
+const CoursePage = (props) => {
+  const { id } = useParams();
+  const queryParams = querystring.parse(props.location.search);
+  const lectureList = useRecoilValue(allCoursesState);
+  const course = lectureList[id] || {};
+  const { lectures = [] } = course;
+  const selectedLecture =
+    lectures.find(
+      (lecture) => lecture.id === parseInt(queryParams.lectureId, 10)
+    ) || lectures[0];
+  const [lectureListHidden, setLectureListHidden] = React.useState(true);
+  if (lectures.length === 0)
+    return (
+      <div className="h-screen">
+        <p className="text-gray-400 text-xl font-semibold text-center mt-12">
+          Lectures coming soon..
+        </p>
+      </div>
+    );
   return (
-    <div className="flex h-screen">
-      <div className="w-1/4 flex-none overflow-y-auto hidden sm:block bg-gray-100 px-5 border-r-1 border-gray-400 rounded-r-md shadow-lg">
-        <p className="text-2xl mt-5 text-gray-700 font-semibold">Azure 101</p>
-        <div className="flex flex-col space-y-2 mt-3">
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <VideoIcon />
-            </i>
-            <p className="text-gray-700">Introduction</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <VideoIcon />
-            </i>
-            <p className="text-gray-700">Prerequisites</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <VideoIcon />
-            </i>
-            <p className="text-gray-700">How to Take this Course</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <SubjectIcon />
-            </i>
-            <p className="text-gray-700">Set up Guide</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <SubjectIcon />
-            </i>
-            <p className="text-gray-700">Getting Help</p>
-          </div>
-        </div>
-        <p className="text-2xl mt-5 text-gray-700 font-semibold">Azure 101</p>
-        <div className="flex flex-col space-y-2 mt-5">
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <VideoIcon />
-            </i>
-            <p className="text-gray-700">Introduction</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <VideoIcon />
-            </i>
-            <p className="text-gray-700">Prerequisites</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <VideoIcon />
-            </i>
-            <p className="text-gray-700">How to Take this Course</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <SubjectIcon />
-            </i>
-            <p className="text-gray-700">Set up Guide</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <SubjectIcon />
-            </i>
-            <p className="text-gray-700">Getting Help</p>
-          </div>
-        </div>
-        <p className="text-2xl mt-5 text-gray-700 font-semibold">Azure 101</p>
-        <div className="flex flex-col space-y-2 mt-5">
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <VideoIcon />
-            </i>
-            <p className="text-gray-700">Introduction</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <VideoIcon />
-            </i>
-            <p className="text-gray-700">Prerequisites</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <VideoIcon />
-            </i>
-            <p className="text-gray-700">How to Take this Course</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <SubjectIcon />
-            </i>
-            <p className="text-gray-700">Set up Guide</p>
-          </div>
-          <div className="flex space-x-3 items-center hover:bg-blue-200 px-3 py-1 rounded-md">
-            <i className="text-gray-500">
-              <SubjectIcon />
-            </i>
-            <p className="text-gray-700">Getting Help</p>
-          </div>
+    <div className="flex flex-col sm:flex-row h-screen">
+      <div className="w-full sm:w-1/5 sm:h-full">
+        <button
+          type="button"
+          className="sm:hidden flex flex-row items-center text-blue-500 bg-gray-100 focus:none p-1 border border-gray-200 shadow-md rounded m-3 mb-0"
+          onClick={() => setLectureListHidden(!lectureListHidden)}
+        >
+          <ListIcon />
+          <p className="text-sm text-gray-500">Lectures</p>
+        </button>
+        <div
+          className={`${lectureListHidden ? 'hidden' : ''} sm:block sm:h-full`}
+        >
+          <LectureList history={props.history} />
         </div>
       </div>
-      <div className="flex flex-col w-full sm:w-3/4 p-5 overflow-y-auto">
-        <div className="flex items-center space-x-3">
-          <i className="text-gray-700">
-            <VideoIcon fontSize="large" />
-          </i>
-          <p className="text-2xl font-bold text-gray-700">Introduction</p>
-        </div>
-        <iframe
-          // width="1296"
-          height="480"
-          className="w-full pt-5 flex-none"
-          src="https://www.youtube.com/embed/tS87Gx7t_9s"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-        {/* <article className="prose lg:prose-xl">
-         
-        </article> */}
-      </div>
+      <Lecture lecture={selectedLecture} history={props.history} />
     </div>
   );
 };

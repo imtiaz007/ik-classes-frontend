@@ -6,34 +6,35 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import 'react-toastify/dist/ReactToastify.min.css';
+import { RecoilRoot } from 'recoil';
 import LandingPage from './pages/landingPage';
 import TopNavBar from './molecules/topNavBar';
 import Footer from './pages/landingPage/components/Footer/Footer';
 import SignUpPage from './pages/SignUpPage/SignUpPage';
-import AllCoursesPage from './pages/AllCoursesPage/AllCoursesPage';
-import CoursePage from './pages/CoursePage/CoursePage';
+
 import SignInPage from './pages/SignInPage';
 import EmailVerifiedPage from './pages/EmailVerifiedPage';
+import CourseContainer from './pages/CourseContainer';
 
 function App() {
   return (
-    <Router>
-      <TopNavBar />
-      <ToastContainer />
-      <div className="">
+    <RecoilRoot>
+      <Router>
+        <TopNavBar />
+        <ToastContainer />
         <Switch>
           <Route path="/home" component={LandingPage} />
           <Route path="/signup" component={SignUpPage} />
           <Route path="/signin" component={SignInPage} />
-          <Route path="/allcourses" component={AllCoursesPage} />
-          <Route path="/course" component={CoursePage} />
+          <Route path="/course" component={CourseContainer} />
           <Route path="/verified" component={EmailVerifiedPage} />
           <Redirect from="*" to="/home" />
         </Switch>
-      </div>
-      <Footer />
-    </Router>
+        <Footer />
+      </Router>
+    </RecoilRoot>
   );
 }
 

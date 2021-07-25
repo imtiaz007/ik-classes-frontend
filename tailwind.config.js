@@ -23,7 +23,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: { textOpacity: ['dark'] },
+    extend: { textOpacity: ['dark'], backgroundColor: ['active'] },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 };
